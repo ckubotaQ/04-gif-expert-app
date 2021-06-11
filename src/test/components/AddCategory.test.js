@@ -38,10 +38,7 @@ wrapper = shallow(<AddCategory setCategories={setCategories}/>)
     });
     wrapper.find('form').simulate('submit',{ preventDefault(){} })
     expect(setCategories).toHaveBeenCalled();
+    expect(setCategories).toHaveBeenCalledWith(expect.any(Function));
     expect(input.prop('value')).toBe('');
     })
-    
-    
-    
-    
 })
